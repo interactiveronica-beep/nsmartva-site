@@ -127,13 +127,32 @@
   <div class="wrap">
     <div class="kicker">Start here</div>
     <h2>Tell us about your big moment</h2>
-    <p class="lead">Use the form below and we'll respond within one business day. No obligation — if we're not the right fit, we'll point you to who is.</p>
+    <p class="lead">Three ways in — pick what fits. We respond within one business day, and if we're not the right fit, we'll point you to who is.</p>
 
-    <!-- MICROSOFT FORMS EMBED: replace PASTE_FORM_EMBED_URL_HERE with your form's embed URL
-         (Microsoft Forms → Collect responses → Embed → copy the src URL from the iframe code) -->
-    <iframe id="msform" class="form-frame" src="PASTE_FORM_EMBED_URL_HERE" title="Service inquiry form"></iframe>
-    <div id="msform-note" class="form-note" hidden>
-      <strong>Inquiry form coming right up.</strong><br>
+    <div class="cards" style="margin-bottom:36px">
+      <div class="card">
+        <h3>Get in touch</h3>
+        <p>New here? Start with the contact form below — tell us a little and we'll take it from there.</p>
+        <span class="mini">General inquiries · new clients · partnerships</span>
+      </div>
+      <div class="card">
+        <h3>Book a consultation</h3>
+        <p>Ready to talk? Pick a time that works and it lands straight on our calendar.</p>
+        <!-- Replace href with your Microsoft Bookings page link -->
+        <a class="btn btn-plum todo" id="bookings-btn" href="PASTE_BOOKINGS_LINK_HERE" style="margin-top:12px;padding:10px 22px;font-size:14px">Book a time</a>
+      </div>
+      <div class="card">
+        <h3>Submit a detailed request</h3>
+        <p>Existing clients and detailed service intake — process service matters, document requests, grant support.</p>
+        <!-- Replace href with your Microsoft Forms link (Collect responses → copy link) -->
+        <a class="btn btn-plum todo" id="msform-btn" href="PASTE_MS_FORM_LINK_HERE" style="margin-top:12px;padding:10px 22px;font-size:14px">Open the request form</a>
+      </div>
+    </div>
+
+    <!-- HUBSPOT CONTACT FORM: replace PASTE_HUBSPOT_FORM_ID_HERE with the form ID from HubSpot (Marketing → Forms → your form → Embed) -->
+    <div id="hsform"></div>
+    <div id="hsform-note" class="form-note" hidden>
+      <strong>Contact form coming right up.</strong><br>
       In the meantime, email us at <a href="mailto:assistant@nsmartva.com?subject=New%20Service%20Request" style="color:var(--mulberry)">assistant@nsmartva.com</a> and we'll take great care of you.<br>
       <span style="font-size:13px">Process service: <a href="mailto:serves@nsmartva.com" style="color:var(--mulberry)">serves@nsmartva.com</a> · Grants &amp; nonprofits: <a href="mailto:grants@nsmartva.com" style="color:var(--mulberry)">grants@nsmartva.com</a></span>
     </div>
@@ -184,12 +203,26 @@
 </footer>
 
 <script>
-  var f = document.getElementById('msform');
-  if (f.getAttribute('src').indexOf('PASTE_') === 0) {
-    f.hidden = true;
-    document.getElementById('msform-note').hidden = false;
+  var HS_FORM_ID = 'PASTE_HUBSPOT_FORM_ID_HERE';
+  ['bookings-btn','msform-btn'].forEach(function(id){
+    var b = document.getElementById(id);
+    if (b && b.getAttribute('href').indexOf('PASTE_') === 0) { b.classList.add('todo'); b.removeAttribute('href'); }
+    else if (b) { b.classList.remove('todo'); }
+  });
+  if (HS_FORM_ID.indexOf('PASTE_') === 0) {
+    document.getElementById('hsform-note').hidden = false;
+  } else {
+    var s = document.createElement('script');
+    s.src = 'https://js-na2.hsforms.net/forms/embed/v2.js';
+    s.onload = function(){
+      hbspt.forms.create({ region: 'na2', portalId: '246662749', formId: HS_FORM_ID, target: '#hsform' });
+    };
+    document.body.appendChild(s);
   }
 </script>
+
+<!-- HubSpot tracking code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="https://js-na2.hs-scripts.com/246662749.js"></script>
 
 </body>
 </html>
