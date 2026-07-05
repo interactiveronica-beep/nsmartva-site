@@ -133,7 +133,8 @@
       <div class="card">
         <h3>Get in touch</h3>
         <p>New here? Start with the contact form below — tell us a little and we'll take it from there.</p>
-        <span class="mini">General inquiries · new clients · partnerships</span>
+        <span class="mini">General inquiries · new clients · partnerships</span><br>
+        <a class="btn btn-plum" href="#hsform" style="margin-top:12px;padding:10px 22px;font-size:14px">Go to the contact form</a>
       </div>
       <div class="card">
         <h3>Book a consultation</h3>
@@ -203,7 +204,7 @@
 </footer>
 
 <script>
-  var HS_FORM_ID = 'PASTE_HUBSPOT_FORM_ID_HERE';
+  var HS_FORM_ID = 'a3a6c957-1c92-49a4-99da-6f9742e97634';
   ['bookings-btn','msform-btn'].forEach(function(id){
     var b = document.getElementById(id);
     if (b && b.getAttribute('href').indexOf('PASTE_') === 0) { b.classList.add('todo'); b.removeAttribute('href'); }
