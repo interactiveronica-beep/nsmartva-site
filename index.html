@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css">
 <style>
   :root{
     --plum:#4E2A47; --mulberry:#8A4A6B; --rose:#DCABB9; --gold:#D9A441; --ivory:#FAF4EC;
@@ -49,6 +50,27 @@
   .card h3{font-size:18px;margin-bottom:10px}
   .card p{font-size:15px;color:#5d5359}
   .card .mini{display:inline-block;margin-top:14px;color:var(--mulberry);font-weight:700;font-size:13px}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:56px 22px;margin-top:60px}
+  .svc{background:#fff;border:1px solid #eee2d9;border-radius:16px;padding:46px 22px 26px;text-align:center;position:relative}
+  .svc .med{position:absolute;top:-32px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;background:var(--plum);border:2.5px solid var(--gold);display:flex;align-items:center;justify-content:center}
+  .svc .med i{font-size:30px;color:var(--gold);line-height:1}
+  .svc h3{font-size:17px;margin:2px 0 8px}
+  .svc p{font-size:14px;color:#5d5359}
+  .svc .mini{display:block;margin-top:12px;color:var(--mulberry);font-weight:700;font-size:12px}
+  .svc .badge{width:100%;max-width:210px;margin-top:14px;border-radius:8px}
+
+  .cform{max-width:560px;margin:0 auto;text-align:left}
+  .cform .row{display:flex;gap:14px;flex-wrap:wrap}
+  .cform .row>div{flex:1;min-width:180px}
+  .cform label{display:block;font-size:13px;font-weight:700;color:var(--plum);margin:14px 0 5px}
+  .cform input,.cform select,.cform textarea{width:100%;padding:11px 13px;border:1px solid #d8ccbf;border-radius:8px;font-family:'Lato',sans-serif;font-size:15px;background:#fff;color:#3a3a38}
+  .cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 2px rgba(217,164,65,.25)}
+  .cform textarea{min-height:110px;resize:vertical}
+  .cform button{margin-top:20px;width:100%;background:var(--plum);color:var(--ivory);border:none;padding:14px;border-radius:8px;font-family:'Lato',sans-serif;font-weight:700;font-size:15px;cursor:pointer}
+  .cform button:hover{background:#3d2138}
+  .cform .fineprint{font-size:12px;color:#8a8078;margin-top:12px;text-align:center}
+  .cform-done{background:#fff;border:1px solid var(--gold);border-radius:12px;padding:32px;text-align:center;color:var(--plum);max-width:560px;margin:0 auto}
 
   .band{background:#fff}
 
@@ -103,23 +125,39 @@
     <div class="kicker">What we do</div>
     <h2>Everyone in their lane. Everything handled.</h2>
     <p class="lead">We handle the logistics of life's big documents — and when legal questions come up, we connect you with a licensed Virginia attorney from our referral network.</p>
-    <div class="cards">
-      <div class="card">
+    <div class="svc-grid">
+      <div class="svc">
+        <div class="med"><i class="ti ti-rubber-stamp" aria-hidden="true"></i></div>
         <h3>Notarization</h3>
         <p>Mobile notarization across Hampton Roads for the documents that need it done right — from a trusted, commissioned Virginia notary public since 2020.</p>
         <span class="mini">Mobile · In person · Loan signings</span>
       </div>
-      <div class="card">
+      <div class="svc">
+        <div class="med"><i class="ti ti-file-text" aria-hidden="true"></i></div>
         <h3>Process Service &amp; Court Filing</h3>
-        <p>Nationwide service of process with documented proof that holds up, plus court filings done correctly and on time. Flat fees, known in advance — with owner-ready reporting for property managers.</p>
+        <p>Nationwide service of process with documented proof that holds up, plus court filings done correctly and on time. Flat fees, known in advance.</p>
         <span class="mini">Free process quote for any written-off balance</span>
       </div>
-      <div class="card">
+      <div class="svc">
+        <div class="med"><i class="ti ti-truck-delivery" aria-hidden="true"></i></div>
+        <h3>Courier &amp; Document Delivery</h3>
+        <p>Time-sensitive documents picked up and hand-delivered — court filings, signatures, sensitive originals. Secure, direct, and priced by the trip, not the case.</p>
+        <span class="mini">Same-day and scheduled runs</span>
+      </div>
+      <div class="svc">
+        <div class="med"><i class="ti ti-id" aria-hidden="true"></i></div>
+        <h3>ID &amp; Document Recovery</h3>
+        <p>Lost your ID, birth certificate, or Social Security card? We walk you through the replacement process step by step — the forms, the where, and the how — so you're not doing it alone.</p>
+        <span class="mini">Vital documents, sorted out</span>
+      </div>
+      <div class="svc">
+        <div class="med"><i class="ti ti-heart-handshake" aria-hidden="true"></i></div>
         <h3>Nonprofit &amp; Grants Administration</h3>
         <p>Board documents, meeting records, grant administration, reporting calendars, and confidential governance support — steady care for the missions that matter.</p>
         <span class="mini">SWaM certified · supplier-diversity friendly</span>
       </div>
-      <div class="card">
+      <div class="svc">
+        <div class="med"><i class="ti ti-briefcase" aria-hidden="true"></i></div>
         <h3>Business &amp; Project Support</h3>
         <p>Project files, schedules, vendor records, and executive follow-through for small businesses and agencies that need a steady hand without hiring one full-time.</p>
         <span class="mini">Collaborations, not just transactions</span>
@@ -133,23 +171,27 @@
     <div class="kicker">Why us</div>
     <h2>A steady hand, every step</h2>
     <p class="lead">Anyone can stamp a document. Here's what makes working with Notary Smart different.</p>
-    <div class="cards">
-      <div class="card">
+    <div class="svc-grid">
+      <div class="svc">
+        <div class="med"><i class="ti ti-users" aria-hidden="true"></i></div>
         <h3>People before paperwork</h3>
         <p>Every document is somebody's big moment — a first home, an estate, a summons, a mission. We treat it that way, from the first call to the final signature.</p>
       </div>
-      <div class="card">
+      <div class="svc">
+        <div class="med"><i class="ti ti-route" aria-hidden="true"></i></div>
         <h3>Everyone in their lane</h3>
         <p>We handle notarization, filing, service, and reporting — and connect you with a licensed Virginia attorney from our referral network when a matter needs legal work. Clean, compliant, complete.</p>
       </div>
-      <div class="card">
+      <div class="svc">
+        <div class="med"><i class="ti ti-tag" aria-hidden="true"></i></div>
         <h3>Flat fees, known up front</h3>
         <p>Court fees are set by the courts; our fees are flat and quoted before you spend a dollar. No hourly surprises, no percentage of recovery — just a price you can budget.</p>
       </div>
-      <div class="card">
+      <div class="svc">
+        <div class="med"><i class="ti ti-award" aria-hidden="true"></i></div>
         <h3>Certified and trusted</h3>
         <p>A women-owned Virginia business trusted with government contracts. Partnering with us can further your own supplier-diversity goals, too.</p>
-        <img src="assets/swam-certified.jpg" alt="SWaM Certified — Small, Women and Minority-Owned, Virginia Department of Small Business and Supplier Diversity" style="width:100%;max-width:260px;margin-top:14px;border-radius:8px">
+        <img class="badge" src="assets/swam-certified.jpg" alt="SWaM Certified — Small, Women and Minority-Owned, Virginia Department of Small Business and Supplier Diversity">
       </div>
     </div>
   </div>
@@ -250,11 +292,34 @@
     <div class="kicker">Request contact</div>
     <h2>Tell us a little — we'll take it from there</h2>
     <p class="lead">We respond within one business day.</p>
-    <div id="hsform"></div>
-    <div id="hsform-note" class="form-note" hidden>
-      <strong>Contact form coming right up.</strong><br>
-      In the meantime, email us at <a href="mailto:assistant@nsmartva.com?subject=New%20Service%20Request" style="color:var(--mulberry)">assistant@nsmartva.com</a> and we'll take great care of you.<br>
-      <span style="font-size:13px">Process service: <a href="mailto:serves@nsmartva.com" style="color:var(--mulberry)">serves@nsmartva.com</a> · Grants &amp; nonprofits: <a href="mailto:grants@nsmartva.com" style="color:var(--mulberry)">grants@nsmartva.com</a></span>
+    <form class="cform" id="contactForm" novalidate>
+      <div class="row">
+        <div><label for="cf-first">First name</label><input id="cf-first" name="firstname" type="text" autocomplete="given-name"></div>
+        <div><label for="cf-last">Last name</label><input id="cf-last" name="lastname" type="text" autocomplete="family-name"></div>
+      </div>
+      <div class="row">
+        <div><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
+        <div><label for="cf-phone">Phone</label><input id="cf-phone" name="phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <label for="cf-service">What do you need help with?</label>
+      <select id="cf-service" name="service">
+        <option value="">Choose one…</option>
+        <option>Notarization</option>
+        <option>Process service or court filing</option>
+        <option>Courier or document delivery</option>
+        <option>ID or document recovery</option>
+        <option>Nonprofit or grants support</option>
+        <option>Business or project support</option>
+        <option>Something else</option>
+      </select>
+      <label for="cf-message">Tell us a little</label>
+      <textarea id="cf-message" name="message" placeholder="A sentence or two about what you need — we'll take it from there."></textarea>
+      <button type="submit" id="cf-submit">Send my request</button>
+      <p class="fineprint">We respond within one business day. Your details go straight to our team — never shared.</p>
+    </form>
+    <div id="cf-done" class="cform-done" hidden>
+      <p style="font-family:'Merriweather',serif;font-size:18px;margin-bottom:8px">Thank you — we've got it.</p>
+      <p style="font-size:15px;color:#5d5359">We'll be in touch within one business day. For anything urgent, email <a href="mailto:assistant@nsmartva.com" style="color:var(--mulberry)">assistant@nsmartva.com</a>.</p>
     </div>
   </div>
 </section>
@@ -283,22 +348,58 @@
 </footer>
 
 <script>
-  var HS_FORM_ID = 'a3a6c957-1c92-49a4-99da-6f9742e97634';
   ['bookings-btn','msform-btn'].forEach(function(id){
     var b = document.getElementById(id);
-    if (b && b.getAttribute('href').indexOf('PASTE_') === 0) { b.classList.add('todo'); b.removeAttribute('href'); }
+    if (b && (b.getAttribute('href')||'').indexOf('PASTE_') === 0) { b.classList.add('todo'); b.removeAttribute('href'); }
     else if (b) { b.classList.remove('todo'); }
   });
-  if (HS_FORM_ID.indexOf('PASTE_') === 0) {
-    document.getElementById('hsform-note').hidden = false;
-  } else {
-    var s = document.createElement('script');
-    s.src = 'https://js-na2.hsforms.net/forms/embed/v2.js';
-    s.onload = function(){
-      hbspt.forms.create({ region: 'na2', portalId: '246662749', formId: HS_FORM_ID, target: '#hsform' });
-    };
-    document.body.appendChild(s);
-  }
+
+  var PORTAL_ID = '246662749';
+  var FORM_GUID = 'a3a6c957-1c92-49a4-99da-6f9742e97634';
+  var form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = document.getElementById('cf-email').value.trim();
+    if (!email) { document.getElementById('cf-email').focus(); return; }
+    var service = document.getElementById('cf-service').value;
+    var msg = document.getElementById('cf-message').value.trim();
+    var combined = (service ? 'Service requested: ' + service + '\n\n' : '') + msg;
+    var btn = document.getElementById('cf-submit');
+    btn.disabled = true; btn.textContent = 'Sending…';
+
+    var fields = [
+      { name: 'email', value: email },
+      { name: 'firstname', value: document.getElementById('cf-first').value.trim() },
+      { name: 'lastname', value: document.getElementById('cf-last').value.trim() },
+      { name: 'phone', value: document.getElementById('cf-phone').value.trim() },
+      { name: 'message', value: combined }
+    ].filter(function(f){ return f.name === 'email' || f.value; });
+
+    fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + PORTAL_ID + '/' + FORM_GUID, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        fields: fields,
+        context: { pageUri: 'https://www.nsmartva.com', pageName: 'Notary Smart Services' }
+      })
+    }).then(function(r){
+      if (r.ok) {
+        form.hidden = true;
+        document.getElementById('cf-done').hidden = false;
+        document.getElementById('cf-done').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        return r.json().then(function(err){ throw err; });
+      }
+    }).catch(function(err){
+      console.error('Form submit error:', err);
+      btn.disabled = false; btn.textContent = 'Send my request';
+      var note = document.createElement('p');
+      note.className = 'fineprint';
+      note.style.color = '#a3402d';
+      note.innerHTML = 'Something went wrong sending that. Please email us at <a href="mailto:assistant@nsmartva.com" style="color:var(--mulberry)">assistant@nsmartva.com</a> and we’ll take care of you right away.';
+      form.appendChild(note);
+    });
+  });
 </script>
 
 <!-- HubSpot tracking code -->
