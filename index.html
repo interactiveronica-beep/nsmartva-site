@@ -44,7 +44,7 @@
   h1,h2,h3{font-family:'Merriweather',serif;color:var(--plum)}
   .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
 
-  header{background:var(--plum);padding:14px 0}
+  header{background:var(--plum);padding:14px 0;position:sticky;top:0;z-index:100}
   header .wrap{display:flex;align-items:center;gap:14px}
   .seal{width:52px;height:52px;border-radius:50%;border:1.5px dotted var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0}
   .seal span{font-family:'Merriweather',serif;font-weight:700;font-size:20px;color:var(--gold)}
@@ -53,6 +53,9 @@
   header nav{margin-left:auto}
   header nav a{color:var(--ivory);text-decoration:none;font-size:14px;margin-left:22px}
   header nav a:hover{color:var(--gold)}
+  header nav a.book{background:var(--gold);color:#42351a;padding:8px 18px;border-radius:6px;font-weight:700}
+  header nav a.book:hover{background:#c99738;color:#42351a}
+  @media(max-width:680px){header nav a:not(.book){display:none}}
 
   .hero{background:var(--plum);color:var(--ivory);padding:72px 0 84px;text-align:center}
   .hero h1{color:var(--ivory);font-size:clamp(28px,5vw,44px);line-height:1.25;max-width:720px;margin:0 auto}
@@ -130,6 +133,7 @@
       <a href="#about">About</a>
       <a href="#inquiry">Inquiries</a>
       <a href="#pay">Payments</a>
+      <a class="book" href="https://outlook.office.com/bookwithme/user/3bcb8f5d352c4c128b079155507e9c98@nsmartva.com/meetingtype/fpeRZRDi-ECc6djMZvfPsg2?anonymous&amp;ismsaljsauthenabled&amp;ep=mLinkFromTile" target="_blank" rel="noopener">Book</a>
     </nav>
   </div>
 </header>
@@ -139,7 +143,7 @@
     <h1>Life's big moments, handled with care.</h1>
     <div class="rule"></div>
     <p>Notarization, nationwide process service, court filing, and administrative support partnerships — for nonprofits, small businesses, agencies, and the neighbors we serve. Based in Portsmouth, Virginia.</p>
-    <a class="btn btn-gold" href="#inquiry">Tell us what you need</a>
+    <a class="btn btn-gold" href="https://outlook.office.com/bookwithme/user/3bcb8f5d352c4c128b079155507e9c98@nsmartva.com/meetingtype/fpeRZRDi-ECc6djMZvfPsg2?anonymous&amp;ismsaljsauthenabled&amp;ep=mLinkFromTile" target="_blank" rel="noopener">Book a consultation</a>
     <a class="btn btn-ghost" href="#services">See our services</a>
   </div>
 </section>
@@ -270,7 +274,7 @@
   <div class="wrap">
     <div class="kicker">Start here</div>
     <h2>Tell us about your big moment</h2>
-    <p class="lead">Three ways in — pick what fits. We respond within one business day, and if we're not the right fit, we'll point you to who is.</p>
+    <p class="lead">Two easy ways to start — book a time that works, or send us a message below. We respond within one business day.</p>
 
     <div class="svc-grid" style="margin-bottom:16px">
       <div class="svc">
@@ -284,12 +288,6 @@
         <h3>Book a consultation</h3>
         <p>Ready to talk? Pick a time that works and it lands straight on our calendar.</p>
         <a class="btn btn-plum" id="bookings-btn" href="https://outlook.office.com/bookwithme/user/3bcb8f5d352c4c128b079155507e9c98@nsmartva.com/meetingtype/fpeRZRDi-ECc6djMZvfPsg2?anonymous&amp;ismsaljsauthenabled&amp;ep=mLinkFromTile" target="_blank" rel="noopener" style="margin-top:16px;padding:10px 22px;font-size:14px">Book a time</a>
-      </div>
-      <div class="svc">
-        <div class="med"><i class="ti ti-file-text" aria-hidden="true"></i></div>
-        <h3>Submit a detailed request</h3>
-        <p>Existing clients and detailed service intake — process service matters, document requests, grant support.</p>
-        <a class="btn btn-plum" id="msform-btn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=6agYtghCLE2GZDH9SWK66oGGuJ96v-BCl7tPoQGFTDhURDFZU0pCM0ZSWU5LTE8yVU1JQTE0S1dFOS4u" target="_blank" rel="noopener" style="margin-top:16px;padding:10px 22px;font-size:14px">Service Request</a>
       </div>
     </div>
 
