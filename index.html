@@ -35,6 +35,24 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Do you come to me, or do I come to you?","acceptedAnswer":{"@type":"Answer","text":"We provide mobile services throughout Hampton Roads. We work where it's most convenient for you."}},
+    {"@type":"Question","name":"What areas do you cover in person, and how far will you travel?","acceptedAnswer":{"@type":"Answer","text":"We proudly serve Hampton Roads, including Portsmouth, Norfolk, Chesapeake, Suffolk, Virginia Beach, Hampton, Newport News, and surrounding communities. Extended travel is available by request."}},
+    {"@type":"Question","name":"How fast can you help? Do you offer same-day?","acceptedAnswer":{"@type":"Answer","text":"In many cases, yes. Same-day and after-hours appointments are available based on scheduling and service type."}},
+    {"@type":"Question","name":"What does a notarization cost? What about process service or courier?","acceptedAnswer":{"@type":"Answer","text":"Pricing varies by service, travel, and complexity. Contact us for a transparent quote before work begins, with no hidden fees."}},
+    {"@type":"Question","name":"What do I need to bring to get something notarized?","acceptedAnswer":{"@type":"Answer","text":"Bring the unsigned document and a valid government-issued photo ID. All signers must be present and able to understand what they are signing."}},
+    {"@type":"Question","name":"Are you an attorney? Can you tell me which form I need?","acceptedAnswer":{"@type":"Answer","text":"No. We are not attorneys and cannot provide legal advice or recommend which forms to use. We are happy to explain our services and direct you to the appropriate resources if needed."}},
+    {"@type":"Question","name":"What exactly is process service, and how does it work?","acceptedAnswer":{"@type":"Answer","text":"Process service is the delivery of legal documents in accordance with applicable laws and court requirements. We handle service professionally and provide documentation of each attempt or completed service."}},
+    {"@type":"Question","name":"Can you serve documents outside Virginia?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can coordinate service through trusted process servers in other jurisdictions when your case requires it."}},
+    {"@type":"Question","name":"How do I pay, and when?","acceptedAnswer":{"@type":"Answer","text":"Payment is due at the time of service unless other arrangements have been made. We accept secure online payments, major credit and debit cards, and other approved payment methods."}},
+    {"@type":"Question","name":"Is my information kept confidential?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. We treat every client's information with professionalism and discretion and only use it as necessary to complete the requested service."}}
+  ]
+}
+</script>
 <style>
   :root{
     --plum:#4E2A47; --mulberry:#8A4A6B; --rose:#DCABB9; --gold:#D9A441; --ivory:#FAF4EC;
@@ -104,6 +122,14 @@
   .cform .fineprint{font-size:12px;color:#8a8078;margin-top:12px;text-align:center}
   .cform-done{background:#fff;border:1px solid var(--gold);border-radius:12px;padding:32px;text-align:center;color:var(--plum);max-width:560px;margin:0 auto}
 
+  .faq{max-width:760px;margin:0 auto}
+  .faq details{background:#fff;border:1px solid #eee2d9;border-radius:10px;margin-bottom:12px}
+  .faq summary{cursor:pointer;padding:16px 46px 16px 20px;font-family:'Merriweather',serif;font-weight:700;color:var(--plum);font-size:16px;list-style:none;position:relative}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:'+';position:absolute;right:20px;top:14px;color:var(--gold);font-weight:700;font-size:24px;line-height:1}
+  .faq details[open] summary::after{content:'\2013'}
+  .faq details p{padding:0 20px 18px;margin:0;color:#5d5359;font-size:15px}
+
   .band{background:#fff}
 
   .form-note{background:#fff;border:2px dashed var(--rose);border-radius:12px;padding:32px;text-align:center;color:#6b5f66}
@@ -135,10 +161,10 @@
       <div class="tag">BIG MOMENTS, HANDLED WITH CARE</div>
     </div>
     <nav aria-label="Primary">
-      <a href="#services">Services</a>
+      <a href="#services">What We Do</a>
       <a href="#why">Why us</a>
       <a href="#about">About</a>
-      <a href="#inquiry">Inquiries</a>
+      <a href="#inquiry">Start Here</a>
       <a class="payh" href="https://buy.stripe.com/dRm14o904d33f0n73QcAo00" target="_blank" rel="noopener">Pay here</a>
       <a class="book" href="https://outlook.office.com/bookwithme/user/3bcb8f5d352c4c128b079155507e9c98@nsmartva.com/meetingtype/fpeRZRDi-ECc6djMZvfPsg2?anonymous&amp;ismsaljsauthenabled&amp;ep=mLinkFromTile" target="_blank" rel="noopener">Book</a>
     </nav>
@@ -206,6 +232,10 @@
     </div>
   </div>
 </section>
+
+<div style="line-height:0">
+  <img src="assets/shipyard-aerial.jpg" alt="Aerial view of the Norfolk Naval Shipyard in Portsmouth, Virginia, with a submarine under way flanked by tugboats" style="width:100%;max-height:360px;object-fit:cover;display:block">
+</div>
 
 <section id="why">
   <div class="wrap">
@@ -300,6 +330,56 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="kicker">Good questions</div>
+    <h2>Frequently asked</h2>
+    <p class="lead">The things people most want to know before reaching out.</p>
+    <div class="faq">
+      <details>
+        <summary>Do you come to me, or do I come to you?</summary>
+        <p>We provide mobile services throughout Hampton Roads. We work where it's most convenient for you.</p>
+      </details>
+      <details>
+        <summary>What areas do you cover in person — and how far will you travel?</summary>
+        <p>We proudly serve Hampton Roads, including Portsmouth, Norfolk, Chesapeake, Suffolk, Virginia Beach, Hampton, Newport News, and surrounding communities. Extended travel is available by request.</p>
+      </details>
+      <details>
+        <summary>How fast can you help? Do you offer same-day?</summary>
+        <p>In many cases, yes. Same-day and after-hours appointments are available based on scheduling and service type.</p>
+      </details>
+      <details>
+        <summary>What does a notarization cost? What about process service or courier?</summary>
+        <p>Pricing varies by service, travel, and complexity. Contact us for a transparent quote before work begins, with no hidden fees.</p>
+      </details>
+      <details>
+        <summary>What do I need to bring to get something notarized?</summary>
+        <p>Bring the unsigned document and a valid government-issued photo ID. All signers must be present and able to understand what they are signing.</p>
+      </details>
+      <details>
+        <summary>Are you an attorney? Can you tell me which form I need?</summary>
+        <p>No. We are not attorneys and cannot provide legal advice or recommend which forms to use. We are happy to explain our services and direct you to the appropriate resources if needed.</p>
+      </details>
+      <details>
+        <summary>What exactly is process service, and how does it work?</summary>
+        <p>Process service is the delivery of legal documents in accordance with applicable laws and court requirements. We handle service professionally and provide documentation of each attempt or completed service.</p>
+      </details>
+      <details>
+        <summary>Can you serve documents outside Virginia?</summary>
+        <p>Yes. We can coordinate service through trusted process servers in other jurisdictions when your case requires it.</p>
+      </details>
+      <details>
+        <summary>How do I pay, and when?</summary>
+        <p>Payment is due at the time of service unless other arrangements have been made. We accept secure online payments, major credit and debit cards, and other approved payment methods.</p>
+      </details>
+      <details>
+        <summary>Is my information kept confidential?</summary>
+        <p>Absolutely. We treat every client's information with professionalism and discretion and only use it as necessary to complete the requested service.</p>
+      </details>
+    </div>
   </div>
 </section>
 
