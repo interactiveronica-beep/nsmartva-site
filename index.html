@@ -55,7 +55,12 @@
   header nav a:hover{color:var(--gold)}
   header nav a.book{background:var(--gold);color:#42351a;padding:8px 18px;border-radius:6px;font-weight:700}
   header nav a.book:hover{background:#c99738;color:#42351a}
-  @media(max-width:680px){header nav a:not(.book){display:none}}
+  header nav a.payh{border:1.5px solid var(--gold);color:var(--gold);padding:7px 16px;border-radius:6px;font-weight:700}
+  header nav a.payh:hover{background:rgba(217,164,65,.15);color:var(--gold)}
+  @media(max-width:680px){header nav a:not(.book):not(.payh){display:none}}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--gold);color:#42351a;padding:10px 18px;font-weight:700;z-index:200;border-radius:0 0 6px 0}
+  .skip:focus{left:0}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 
   .hero{background:var(--plum);color:var(--ivory);padding:72px 0 84px;text-align:center}
   .hero h1{color:var(--ivory);font-size:clamp(28px,5vw,44px);line-height:1.25;max-width:720px;margin:0 auto}
@@ -115,28 +120,32 @@
   footer{background:var(--plum);color:var(--rose);padding:44px 0;font-size:14px}
   footer .wrap{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:center}
   footer a{color:var(--gold);text-decoration:none}
-  .disclaimer{margin-top:18px;font-size:12px;color:#b78ca4;font-style:italic;max-width:720px}
+  .disclaimer{margin-top:18px;font-size:12px;color:var(--rose);font-style:italic;max-width:720px}
 </style>
 </head>
 <body>
 
+<a class="skip" href="#main">Skip to main content</a>
+
 <header>
   <div class="wrap">
-    <div class="seal"><span>ns</span></div>
+    <div class="seal" aria-hidden="true"><span>ns</span></div>
     <div>
       <div class="name">Notary Smart Services</div>
       <div class="tag">BIG MOMENTS, HANDLED WITH CARE</div>
     </div>
-    <nav>
+    <nav aria-label="Primary">
       <a href="#services">Services</a>
       <a href="#why">Why us</a>
       <a href="#about">About</a>
       <a href="#inquiry">Inquiries</a>
-      <a href="#pay">Payments</a>
+      <a class="payh" href="https://buy.stripe.com/dRm14o904d33f0n73QcAo00" target="_blank" rel="noopener">Pay here</a>
       <a class="book" href="https://outlook.office.com/bookwithme/user/3bcb8f5d352c4c128b079155507e9c98@nsmartva.com/meetingtype/fpeRZRDi-ECc6djMZvfPsg2?anonymous&amp;ismsaljsauthenabled&amp;ep=mLinkFromTile" target="_blank" rel="noopener">Book</a>
     </nav>
   </div>
 </header>
+
+<main id="main">
 
 <section class="hero">
   <div class="wrap">
@@ -294,39 +303,7 @@
   </div>
 </section>
 
-<section id="pay" class="band pay">
-  <div class="wrap">
-    <div class="kicker">Payments</div>
-    <h2>Simple, secure, flat-fee</h2>
-    <p class="lead">Our fees are flat and quoted before you pay a dollar. Pay securely online once your quote is confirmed. Invoice questions: <a href="mailto:invoices@nsmartva.com" style="color:var(--mulberry)">invoices@nsmartva.com</a></p>
-    <div class="svc-grid">
-      <div class="svc">
-        <div class="med"><i class="ti ti-rubber-stamp" aria-hidden="true"></i></div>
-        <h3>Notarization</h3>
-        <div class="price">From $10</div>
-        <p>Per notarial act, per Virginia's set maximums. Travel fees quoted up front.</p>
-        <!-- Replace href with your Stripe payment link -->
-        <a class="btn btn-plum todo" href="#" data-pay="notary" style="margin-top:16px;padding:10px 22px;font-size:14px">Pay for notarization</a>
-      </div>
-      <div class="svc">
-        <div class="med"><i class="ti ti-file-text" aria-hidden="true"></i></div>
-        <h3>Process Service</h3>
-        <div class="price">Flat fee</div>
-        <p>Quoted per case, per party, before we begin — never hourly, just a clear flat price.</p>
-        <a class="btn btn-plum todo" href="#" data-pay="process" style="margin-top:16px;padding:10px 22px;font-size:14px">Pay your quote</a>
-      </div>
-      <div class="svc">
-        <div class="med"><i class="ti ti-receipt" aria-hidden="true"></i></div>
-        <h3>Partnership Invoices</h3>
-        <div class="price">As invoiced</div>
-        <p>Monthly partners and agencies: pay your invoice number securely online.</p>
-        <a class="btn btn-plum todo" href="#" data-pay="invoice" style="margin-top:16px;padding:10px 22px;font-size:14px">Pay an invoice</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="request-contact">
+<section id="request-contact" class="band">
   <div class="wrap">
     <div class="kicker">Request contact</div>
     <h2>Tell us a little — we'll take it from there</h2>
@@ -363,6 +340,8 @@
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="wrap">
     <div>
@@ -384,7 +363,8 @@
   <div class="wrap">
     <img src="assets/swam-certified.jpg" alt="SWaM Certified — Small, Women and Minority-Owned business, Commonwealth of Virginia" style="display:block;width:170px;border-radius:8px;margin:0 0 16px">
     <p class="disclaimer">Notary Smart Services LLC provides notarial, process service, court filing, courier, and administrative support services. It is not a law firm and does not engage in the practice of law. Nothing provided by Notary Smart Services LLC constitutes legal advice, and no attorney-client relationship is created. Clients are responsible for the preparation and content of their legal documents, or may engage a licensed attorney. Commissioned notary public, Commonwealth of Virginia · SWaM certified.</p>
-    <p style="margin-top:12px;font-size:13px"><a href="privacy.html" style="color:var(--gold)">Privacy Policy</a></p>
+    <p style="margin-top:12px;font-size:13px"><a href="privacy.html" style="color:var(--gold)">Privacy Policy</a> · <a href="terms.html" style="color:var(--gold)">Terms &amp; Conditions</a></p>
+    <p style="margin-top:8px;font-size:12px;color:var(--rose)">We're committed to an accessible experience for everyone. If anything on this site is hard for you to use, tell us at <a href="mailto:support@nsmartva.com">support@nsmartva.com</a> and we'll make it right.</p>
   </div>
 </footer>
 
